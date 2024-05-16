@@ -14,6 +14,7 @@ public class Ejercicio05 {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("empresa");//persistence-unit del persistence.xml
 		EntityManager em = emf.createEntityManager();
 		
+		//Selecciona todos los empleados de un departamento concreto.
 		TypedQuery<Empleado> consulta = em.createQuery("SELECT e FROM Empleado e WHERE e.departamento.id = :idDepartamento ", Empleado.class);
 		consulta.setParameter("idDepartamento", "2");
 		List<Empleado> lista = consulta.getResultList();

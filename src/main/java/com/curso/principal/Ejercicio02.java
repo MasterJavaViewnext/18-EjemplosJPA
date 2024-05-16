@@ -14,6 +14,7 @@ public class Ejercicio02 {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("empresa");
 		EntityManager em = emf.createEntityManager();
 		
+		//Crea un nuevo empleado y asígnalo a un departamento que ya existe
 		em.getTransaction().begin();
 		Departamento departamento = em.find(Departamento.class, "2");
 		Empleado empleado = new Empleado("Nuevo pedro", Date.valueOf("2015-5-15"), 2000, departamento);

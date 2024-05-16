@@ -14,6 +14,7 @@ public class Ejercicio07 {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("empresa");//persistence-unit del persistence.xml
 		EntityManager em = emf.createEntityManager();
 		
+		//Selecciona los empleados que ganan menos que el promedio
 		TypedQuery<Empleado> consulta = em.createQuery("SELECT e FROM Empleado e WHERE e.sueldo < (SELECT avg(p.sueldo) FROM Empleado p)", Empleado.class);
 		List<Empleado> lista = consulta.getResultList();
 		

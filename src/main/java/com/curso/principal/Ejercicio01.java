@@ -16,6 +16,7 @@ public class Ejercicio01 {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("empresa");
 		EntityManager em = emf.createEntityManager();
 		
+		//La empresa está en proceso de expansión y necesita crear un departamento nuevo y asignar a dicho departamento tres nuevos empleados.
 		em.getTransaction().begin();
 		Departamento departamento = new Departamento("Desarrolladores Python", "Ourense");
 		Empleado empleado1 = new Empleado("Naia", Date.valueOf("2015-5-15"), 2000, departamento);

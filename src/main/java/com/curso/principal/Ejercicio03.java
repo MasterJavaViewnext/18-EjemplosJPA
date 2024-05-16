@@ -11,6 +11,7 @@ public class Ejercicio03 {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("empresa");
 		EntityManager em = emf.createEntityManager();
 		
+		//Dados dos empleados muestra por pantalla el que lleva menos tiempo trabajando en la empresa.
 		Empleado empleado1 = em.find(Empleado.class, 1);
 		Empleado empleado2 = em.find(Empleado.class, 2);
 		
