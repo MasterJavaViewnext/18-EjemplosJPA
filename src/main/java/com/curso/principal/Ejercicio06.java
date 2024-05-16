@@ -16,7 +16,7 @@ public class Ejercicio06 {
 		
 		//Selecciona los departamentos con menos de n empleados.
 		TypedQuery<Departamento> consulta = em.createQuery("SELECT d FROM Departamento d WHERE SIZE(d.empleados) < :numEmpleados", Departamento.class);
-		consulta.setParameter("numEmpleados", 4);
+		consulta.setParameter("numEmpleados", 3);
 		List<Departamento> lista = consulta.getResultList();
 		
 		for (Departamento item : lista) {

@@ -1,9 +1,18 @@
-INSERT INTO departamentos (nombre, localidad) VALUES ('RRHH', 'Ourense');
-INSERT INTO departamentos (nombre, localidad) VALUES ('Java', 'Ourense');
 
 
-INSERT INTO empleados (nombre, fecha, sueldo, id_dept) VALUES ("raul", '2024-05-15', 2000, 1);
-INSERT INTO empleados (nombre, fecha, sueldo, id_dept) VALUES ("pedro", '2024-05-10', 2000, 1);
-INSERT INTO empleados (nombre, fecha, sueldo, id_dept) VALUES ("pepito", '2024-05-13', 2000, 2);
-INSERT INTO empleados (nombre, fecha, sueldo, id_dept) VALUES ("pepe", '2024-05-15', 1500, 2);
-INSERT INTO empleados (nombre, fecha, sueldo, id_dept) VALUES ("pepa", '2024-05-15', 2500, 2);
+INSERT INTO noticia (titulo, autor, fecha) VALUES ("titulo 1", "raul", '2024-05-15');
+INSERT INTO noticia (titulo, autor, fecha) VALUES ("titulo 2", "pepe", '2024-05-15');
+INSERT INTO noticia (titulo, autor, fecha) VALUES ("titulo 3", "pedro", '2024-05-15');
+INSERT INTO noticia (titulo, autor, fecha) VALUES ("titulo 4", "pepa", '2024-05-15');
+INSERT INTO noticia (titulo, autor, fecha) VALUES ("titulo 5", "pedra", '2024-05-15');
+
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 1);
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 1);
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 1);
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 1);
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 3);
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 4);
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 3);
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 4);
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 3);
+INSERT INTO comentario (texto, autor, id_noticia) VALUES ('lorem ipsum texto del comentario', 'Raul', 2);
