@@ -14,7 +14,8 @@ public class Ejercicio06 {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("empresa");//persistence-unit del persistence.xml
 		EntityManager em = emf.createEntityManager();
 		
-		TypedQuery<Departamento> consulta = em.createQuery("SELECT d FROM Departamento d WHERE SIZE(d.empleados) < 3", Departamento.class);
+		TypedQuery<Departamento> consulta = em.createQuery("SELECT d FROM Departamento d WHERE SIZE(d.empleados) < :numEmpleados", Departamento.class);
+		consulta.setParameter("numEmpleados", 4);
 		List<Departamento> lista = consulta.getResultList();
 		
 		for (Departamento item : lista) {
